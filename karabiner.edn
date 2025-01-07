@@ -1,0 +1,241 @@
+{
+  :layers {
+    :layer-mode {:key :right_command :alone {:key :return_or_enter}}
+    :media-mode {:key :fn :alone {:key :return_or_enter}}
+  }
+  :devices {
+    :apple [{:product_id 633 :vendor_id 1452}]
+  }
+  :main [
+    {
+    :des "Layer mode"
+    
+    :rules [:layer-mode
+      ;; vim
+      [:j :left_arrow]
+      [:!Cj :!Cleft_arrow]
+      [:!Sj :!Sleft_arrow]
+      [:!Oj :!Oleft_arrow]
+      [:k :down_arrow]
+      [:!Ck :!Cdown_arrow]
+      [:!Sk :!Sdown_arrow]
+      [:!Ok :!Odown_arrow]
+      [:l :up_arrow]
+      [:!Cl :!Cup_arrow]
+      [:!Sl :!Sup_arrow]
+      [:!Ol :!Oup_arrow]
+      [:semicolon :right_arrow]
+      [:!Csemicolon :!Cright_arrow]
+      [:!Ssemicolon :!Sright_arrow]
+      [:!Osemicolon :!Oright_arrow]
+
+      [:q :!S1]
+      [:w :!S2]
+      [:e :!Sopen_bracket]
+      [:r :!Sclose_bracket]
+      [:t :!Sbackslash]
+      [:a :!S3]
+      [:s :!S4]
+      [:d :!S9]
+      [:f :!S0]
+      [:g :!S7]
+      [:z :!S5]
+      [:x :!S6]
+      [:c :open_bracket]
+      [:v :close_bracket]
+      [:b :!S8]
+      [:u :backslash]
+      [:i :!Squote]
+      [:o :quote]
+      [:p :grave_accent_and_tilde]
+      [:open_bracket  :!Sgrave_accent_and_tilde]
+      [:quote :semicolon]
+      
+      
+
+      ;; key
+    ]},
+    {
+    :des "Media mode"
+    :rules [:media-mode
+      [:a :1]
+      [:s :2]
+      [:d :3]
+      [:f :4]
+      [:g :5]
+      [:j :6]
+      [:k :7]
+      [:l :8]
+      [:semicolon :9]
+      [:quote :0]
+      [:q :f1]
+      [:w :f2]
+      [:e :f3]
+      [:r :f4]
+      [:t :f5]
+      [:u :f6]
+      [:i :f7]
+      [:o :f8]
+      [:p :f9]
+      [:open_bracket :f10]
+      [:close_bracket :f11]
+      [:backslash :f12]
+    ]},
+    {
+    :des "built-in keyboard change" 
+    :rules [:apple
+      [:##left_control :left_control nil {:alone [:escape :japanese_eisuu]}]
+      ;; [:left_control [:escape :japanese_eisuu]]
+      [:##japanese_kana :left_option nil {:alone :japanese_kana}]
+      [:##spacebar :left_shift nil {:alone :japanese_eisuu}]
+      ;; [:left_command :left_control]
+      ;; [:##spacebar :left_shift nil {:alone :spacebar}]
+
+      [:japanese_eisuu :spacebar]
+      [:!Cjapanese_eisuu :!Cspacebar]
+      [:!Tjapanese_eisuu :!Tspacebar]
+      [:!Sjapanese_eisuu :!Sspacebar]
+      [:!Ojapanese_eisuu :!Ospacebar]
+
+      [:left_shift :left_command]
+      [:!Cleft_shift :!Cleft_command]
+      [:!Tleft_shift :!Tleft_command]
+      [:!Sleft_shift :!Sleft_command]
+      [:!Oleft_shift :!Oleft_command]
+
+      [:u :y]
+
+      [:u :y]
+      [:!Cu :!Cy]
+      [:!Tu :!Ty]
+      [:!Su :!Sy]
+      [:!Ou :!Oy]
+
+      [:i :u]
+      [:!Ci :!Cu]
+      [:!Ti :!Tu]
+      [:!Si :!Su]
+      [:!Oi :!Ou]
+
+      [:o :i]
+      [:!Co :!Ci]
+      [:!To :!Ti]
+      [:!So :!Si]
+      [:!Oo :!Oi]
+
+      [:p :o]
+      [:!Cp :!Co]
+      [:!Tp :!To]
+      [:!Sp :!So]
+      [:!Op :!Oo]
+
+
+
+      [:open_bracket :p]
+      [:!Copen_bracket :!Cp]
+      [:!Topen_bracket :!Tp]
+      [:!Sopen_bracket :!Sp]
+      [:!Oopen_bracket :!Op]
+
+      [:close_bracket :delete_or_backspace]
+
+      [:j :h]
+      [:!Cj :!Ch]
+      [:!Tj :!Th]
+      [:!Sj :!Sh]
+      [:!Oj :!Oh]
+
+      [:k :j]
+      [:!Ck :!Cj]
+      [:!Tk :!Tj]
+      [:!Sk :!Sj]
+      [:!Ok :!Oj]
+
+      [:l :k]
+      [:!Cl :!Ck]
+      [:!Tl :!Tk]
+      [:!Sl :!Sk]
+      [:!Ol :!Ok]
+
+      [:semicolon :l]
+      [:!Csemicolon :!Cl]
+      [:!Tsemicolon :!Tl]
+      [:!Ssemicolon :!Sl]
+      [:!Osemicolon :!Ol]
+
+      [:quote :!Ssemicolon]
+      [:!Cquote :!Ssemicolon]
+      [:!Tquote :!Ssemicolon]
+      [:!Squote :semicolon]
+      [:!Oquote :!Ssemicolon]
+
+      [:backslash :hyphen]
+      [:!Cbackslash :!Chyphen]
+      [:!Tbackslash :!Thyphen]
+      [:!Sbackslash :!Shyphen]
+      [:!Obackslash :!Ohyphen]
+
+      [:m :n]
+      [:!Cm :!Cn]
+      [:!Tm :!Tn]
+      [:!Sm :!Sn]
+      [:!Om :!On]
+
+      [:comma :m]
+      [:!Ccomma :!Cm]
+      [:!Tcomma :!Tm]
+      [:!Scomma :!Sm]
+      [:!Ocomma :!Om]
+
+      [:period :comma]
+      [:!Cperiod :!Ccomma]
+      [:!Tperiod :!Tcomma]
+      [:!Speriod :!Scomma]
+      [:!Operiod :!Ocomma]
+
+      [:slash :period]
+      [:!Cslash :!Cperiod]
+      [:!Tslash :!Tperiod]
+      [:!Sslash :!Speriod]
+      [:!Oslash :!Operiod]
+
+      [:international1 :slash]
+      [:!Cinternational1 :!Cslash]
+      [:!Tinternational1 :!Tslash]
+      [:!Sinternational1 :!Sslash]
+      [:!Ointernational1 :!Oslash]
+
+      [:right_shift :equal_sign]
+      [:!Cright_shift :equal_sign]
+      [:!Tright_shift :equal_sign]
+      [:!Sright_shift :!Sequal_sign]
+      [:!Oright_shift :equal_sign]
+      
+
+      ;; [:quote :quote]
+      ;; [:caps_lock :left_command]
+      ;; [:!Scaps_lock :!Sleft_command]
+      ;; [:!Ocaps_lock :!Oleft_command]
+      ;; [:delete_or_backspace :grave_accent_and_tilde]
+      ;; [:!Cdelete_or_backspace :!Cgrave_accent_and_tilde]
+      ;; [:!Sdelete_or_backspace :!Sgrave_accent_and_tilde]
+      ;; [:!Odelete_or_backspace :!Ograve_accent_and_tilde]
+      ;; [:grave_accent_and_tilde :escape]
+      ;; [:right_shift :right_control]
+      ;; ;; disable unnecessary keys
+      ;; [:escape :vk_none]
+      ;; [:f1 :vk_none]
+      ;; [:f2 :vk_none]
+      ;; [:f3 :vk_none]
+      ;; [:f4 :vk_none]
+      ;; [:f5 :vk_none]
+      ;; [:f6 :vk_none]
+      ;; [:f7 :vk_none]
+      ;; [:f8 :vk_none]
+      ;; [:f9 :vk_none]
+      ;; [:f10 :vk_none]
+      ;; [:f11 :vk_none]
+      ;; [:f12 :vk_none]
+    ]},
+  ]
+}
